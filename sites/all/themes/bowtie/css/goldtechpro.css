@@ -1,0 +1,54 @@
+/*
+CSS overrides of Bowtie CSS for GoldTechPro.com after mods
+Jim Goldbloom
+*/
+
+div#breadcrumb-text {padding-left: 16px; background: url('/images/blue-bullet.png'); background-repeat: no-repeat; height: 16px; vertical-align: middle; line-height: 16px}
+
+div.view-testimonial a:hover {color: white !important}
+div.region-footer-copyright p, div.region-footer-copyright p a, ul.footer-nav li a {color: silver !important}
+div.region-footer-copyright p a:hover, ul.footer-nav li a:hover {color: #48A9E4 !important; text-decoration: underline !important}
+div.more-link a[href="/blog"] {display: none !important}
+div.widget-block div.links ul.links li {display: none !important}
+div.widget-block div.poll div.bar, div.widget-block div.poll div.percent {width: 80% !important}
+div#header_search_form {margin: 0 0 0 0; padding: 0; text-align: right; width: 960px; height: 24px !important}
+div#block-custom-search-blocks-1 {width: 960px; height: 24px !important; margin: 0 !important; padding: 0 !important}
+div#block-custom-search-blocks-1 input {line-height: 18px !important; float: right !important; margin: 0 0 -16px 4px !important; padding: 0 !important}
+div#block-custom-search-blocks-1 input#edit-submit {float: left; position: relative; top: -2px !important}
+div#clients_tab {width: 258px; margin: 0 auto; padding-top: 40px}
+div#clients_tab div.left {float: left}
+div#clients_tab div.right {clear: right}
+div#clients_tab div {
+	width: 125px; line-height: 125px; height: 125px; margin: 0 2px 2px 0; padding: 0; 
+	background-color: white;
+	text-align: center; vertical-align: middle;
+	border: 1px solid silver;
+	background-image: url('/images/gray-gradient-background.png');
+}
+div#clients_tab span.read-more a, div.view-testimonials span.read-more a, ul.who-we-are li span.social-link a {
+	float: right; margin: 10px 0 24px 0; font-size: 10px; color: rgb(153,153,153)
+}
+div#clients_tab div.left a, div#clients_tab div.right a {color: gray; font-size: 13px !important; font-weight: bold}
+div#clients_tab div.left a:hover, div#clients_tab div.right a:hover {color: #48A9E4; text-decoration: underline}
+
+ul.who-we-are.left {width: 280px !important}
+.goldtechpro-rounded-corners {
+	-moz-border-radius: 20px;
+	-webkit-border-radius: 20px;
+	-khtml-border-radius: 20px;
+	border-radius: 20px
+}
+div.block-fancy-login div a {
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-khtml-border-radius: 4px;
+	border-radius: 4px;
+	font-weight: normal; font-size: 11px; border: 1px solid silver; background-color: #f5f4f4; padding: 4px 12px 4px 12px;
+	z-index: 1000
+}
+div#globaltechpro_top {clear: both; margin: 16px 0 10px 12px}
+
+.item-list .pager {margin-top: 22px !important}
+a.read-more {color: blue}
+
+.image-fade img {border: 1px solid silver;}

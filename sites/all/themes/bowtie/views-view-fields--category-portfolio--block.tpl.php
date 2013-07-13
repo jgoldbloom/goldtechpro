@@ -1,0 +1,1 @@
+<a href="<?php print url('portfolio/'.$fields['tid']->content); ?>"><?php print $fields['name']->content; ?></a>

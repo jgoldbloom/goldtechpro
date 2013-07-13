@@ -1,0 +1,7 @@
+Options -Indexes +ExecCGI
+AddHandler cgi-script .cgi .pl
+AuthGroupFile /dev/null
+AuthType Basic
+AuthUserFile /home/jim/domains/goldtechpro.com/.htpasswd/public_html/cgi-bin/.htpasswd
+AuthName "Owner's Area"
+require valid-user

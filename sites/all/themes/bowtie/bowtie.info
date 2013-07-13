@@ -1,0 +1,57 @@
+
+name = Bowtie
+description = Premium Drupal theme by <a href="http://www.themesnap.com">ThemeSnap.com</a>.
+screenshot = screenshot.png
+version = "7.x-1.0"
+core = 7.x
+
+settings[tm_sliders] = 0
+settings[tm_layouts] = 0
+settings[tm_blog] = 2
+settings[tm_archive] = 2
+settings[tm_portfolio] = 0
+
+settings[tm_ac_twitter] = themesnap
+settings[tm_ac_setting_0] = test
+settings[tm_ac_setting_1] = test
+settings[tm_ac_setting_2] = test
+
+regions[search] = Search Form
+regions[sidebar_top] = Sidebar Top
+regions[sidebar_tab] = Sidebar Tab
+regions[sidebar_bottom] = Sidebar Bottom
+regions[content] = Content
+regions[slide_show] = Home Slide show
+regions[home_testimonial] = Home Testimonial
+regions[home_portfolio] = Home Portfolio
+regions[home_services] = Home Services
+regions[home_blog_left] = Home blog Left
+regions[home_blog_right] = Home blog Right
+
+regions[footer_widgets] = Footer Widgets
+regions[footer_copyright] = Footer Copyright
+
+stylesheets[all][] = css/reset.css
+stylesheets[all][] = css/typography.css
+stylesheets[all][] = css/960.css
+stylesheets[screen][] = css/jquery.fancybox-1.3.4.css
+stylesheets[all][] = css/jquery-ui.css
+stylesheets[screen][] = tuw-inc/style.css
+stylesheets[all][] = css/body.css
+stylesheets[handheld][] = css/handheld.css
+stylesheets[all][] = css/goldtechpro.css
+
+scripts[] = js/jquery-ui.min.js
+scripts[] = js/jquery.fancybox-1.3.4.js
+scripts[] = js/mosaic.1.0.1.min.js
+scripts[] = js/jquery.tooltip.min.js
+;scripts[] = js/portfolio.js
+scripts[] = js/hoverIntent.js
+scripts[] = js/superfish.js
+scripts[] = tuw-inc/jquery.tuw.js
+scripts[] = includes/js/jquery.jigowatt.js
+scripts[] = js/scripts.js
+scripts[] = js/tabbed.js
+scripts[] = js/jquery.quote_rotator.js
+scripts[] = js/jquery.nivo.slider.pack.js
+scripts[] = scripts/swfobject/swfobject.js
