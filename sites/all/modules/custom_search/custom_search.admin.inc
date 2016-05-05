@@ -11,7 +11,7 @@
 function custom_search_admin() {
   // Basic settings.
   $form = _custom_search_default_admin_form();
-  // Custom search paths
+  // Custom search paths.
   $form = array_merge($form, _custom_search_custom_paths_admin_form());
   // Ordering.
   $form = array_merge($form, _custom_search_ordering_admin_form());
@@ -49,6 +49,9 @@ function custom_search_content_admin() {
   return system_settings_form(_custom_search_content_admin_form());
 }
 
+/**
+ * Results page settings.
+ */
 function custom_search_results_admin() {
   $form['custom_search_target'] = array(
     '#type'     => 'select',
@@ -131,22 +134,28 @@ function custom_search_results_admin() {
     );
   }
 
-  if (module_exists('taxonomy')) {
-    $form['search_form']['advanced']['taxonomy'] = array(
-      '#type'         => 'fieldset',
-      '#title'        => t('Taxonomy'),
-      '#description'  => t('Select the vocabularies to display on the advanced search form.'),
-      '#collapsible'  => TRUE,
-      '#collapsed'    => TRUE,
-    );
-    $vocabularies = taxonomy_get_vocabularies();
-    foreach ($vocabularies as $voc) {
-      $form['search_form']['advanced']['taxonomy']['custom_search_advanced_voc' . $voc->vid . '_display'] = array(
-        '#type'           => 'checkbox',
-        '#title'          => $voc->name,
-        '#default_value'  => variable_get('custom_search_advanced_voc' . $voc->vid . '_display', TRUE),
-      );
+  // Languages.
+  $language_options = array();
+  foreach (language_list('language') as $key => $entity) {
+    if ($entity->enabled) {
+      $language_options[$key] = $entity->name;
     }
+  }
+  // Add language neutral to the list.
+  $language_options['und'] = t('Language neutral');
+  $form['search_form']['advanced']['languages'] = array(
+    '#type'         => 'fieldset',
+    '#title'        => t('Languages'),
+    '#description'  => t('Select the languages to display on the advanced search form.'),
+    '#collapsible'  => TRUE,
+    '#collapsed'    => TRUE,
+  );
+  foreach ($language_options as $key => $name) {
+    $form['search_form']['advanced']['languages']['custom_search_advanced_language_' . $key . '_display'] = array(
+      '#type'           => 'checkbox',
+      '#title'          => $name,
+      '#default_value'  => variable_get('custom_search_advanced_language_' . $key . '_display', TRUE),
+    );
   }
 
   $form['results'] = array(

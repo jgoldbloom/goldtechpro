@@ -1,12 +1,10 @@
 <?php
 
-// $Id: fancy_login.install,v 1.2 2011/01/25 08:41:24 hakulicious Exp $
-
-function fancy_login_install()
-{
-
-}
-
+/**
+ * Implementation of hook_uninstall()
+ *
+ * Cleans up own variables from the system
+ */
 function fancy_login_uninstall()
 {
 	variable_del('screen_fade_color');
@@ -17,4 +15,12 @@ function fancy_login_uninstall()
 	variable_del('login_box_border_color');
 	variable_del('login_box_border_width');
 	variable_del('login_box_border_style');
+	variable_del('screen_fade_z_index');
+	variable_del('fancy_login_hide_objects');
+	variable_del('fancy_login_dim_fade_speed');
+	variable_del('fancy_login_box_fade_speed');
+	variable_del('fancy_login_no_redirect');
+	variable_del('fancy_login_disable_registration');
+	variable_del('fancy_login_https');
+	variable_del('fancy_login_icon_position');
 }
